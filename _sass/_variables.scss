@@ -1,6 +1,28 @@
+/* Colors */
+
+$black: #001219;
+$white: #f9faf9;
+$neutral: #e1dada;
+
+$text: $black;
+
+/* Coolors Exported Palette - coolors.co/745296-77b6ea-85af80-ffcb69-ff6978-9b2226 */
+$purple: #745296ff;
+$blue: #77B6eaff;
+$green: #85af80ff;
+$yellow: #ffcb69ff;
+$pink: #ff6978ff;
+$red: #9b2226ff;
+
 /* Responsivity */
 $desktopMinimum: 992px;
 $veryTinyMax: 576px;
+
+$titleFont: 'Shrikhand', serif;
+$headingFont: 'Rammetto One', sans-serif;
+$bodyFont: 'Dongle', sans-serif;
+
+$regularFont: $bodyFont;
 
 .desktop-only {
     @media (max-width: $desktopMinimum) { 

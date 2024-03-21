@@ -1,0 +1,48 @@
+@import "_variables";
+
+header {
+    @include flex-align-self(stretch);
+    @include flex-shrink(0);
+
+    @include display-flex;
+    @include flex-direction(column);
+    @include flex-justify-content(space-around);
+    @include flex-align-items(center);
+
+    text-align: center;
+
+    @media (max-width: $veryTinyMax) { 
+        padding-top: 1em;
+        min-height: 12em;
+    }
+
+    h1.title {
+        font: normal 2em $titleFont, cursive;
+        text-transform: uppercase;
+        line-height: 1em;
+        margin: 0;
+
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+
+        @media (min-width: $veryTinyMax) { font-size: 3em; }
+    }
+
+    .subtitle {
+        color: $black;
+        font: .9em $headingFont, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        padding-top: 1.5rem;
+    }
+
+    @media (min-width: $desktopMinimum) {
+        &.home {
+            padding-top: 2rem;
+            .title { font-size: 3em; }
+            border-top: 1em solid $purple;
+        }
+    }
+}

@@ -13,22 +13,22 @@ body {
     height: 100%;
     margin: 0;
 
-    background: white;
-    color: black;
-    font-family: sans-serif;
+    background:$neutral;
+    color:$text;
+    font-family: $regularFont;
     font-size: 1.2em;
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: serif;
-    color: red;
+    font-family: $headingFont;
+    color: $black;
     font-weight: lighter;
 }
 
 a { 
-    color: blue;
+    color:$blue;
     &:hover {
-        color: green;
+        color:$green;
     }
 }
 
@@ -60,3 +60,12 @@ blockquote {
     margin-left: 0;
     font-style: italic;
 }
+
+// === HELPERS === === === === ===
+
+.purple { color: $purple; }
+.blue { color: $blue; }
+.green { color: $green; }
+.yellow { color: $yellow; }
+.pink { color: $pink; }
+.red { color: $red; }
