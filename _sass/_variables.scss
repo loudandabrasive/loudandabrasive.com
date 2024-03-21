@@ -1,0 +1,15 @@
+/* Responsivity */
+$desktopMinimum: 992px;
+$veryTinyMax: 576px;
+
+.desktop-only {
+    @media (max-width: $desktopMinimum) { 
+        display: none !important;
+    }
+}
+
+.mobile-only {
+    @media (min-width: $desktopMinimum) { 
+        display: none !important;
+    }
+}
