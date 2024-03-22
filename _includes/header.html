@@ -5,3 +5,15 @@
 <span class="subtitle">
     Art · Games · Software · Bull$#!&
 </span>
+
+<div class="header-links">
+{% for link in site.data.header_links %}
+  {% if link.show == true %}
+    <li>
+      <a href="{{link.url}}" title="{{link.title}}" target="_blank">
+        <i class="{{link.icon}}"></i>
+      </a>
+    </li>
+  {% endif %}
+{% endfor %}
+</div>
