@@ -20,12 +20,17 @@ body {
     background-color: $light-purple;
     border-top: 1em solid $purple;
 
-    &.purple { background-color: $light-purple; border-top: 1em solid $purple; }
-    &.blue   { background-color: $light-blue; border-top: 1em solid $blue; }
-    &.green  { background-color: $light-green; border-top: 1em solid $green; }
-    &.yellow { background-color: $light-yellow; border-top: 1em solid $yellow; }
-    &.pink   { background-color: $light-pink; border-top: 1em solid $pink; }
-    &.red    { background-color: $light-red; border-top: 1em solid $red; }
+    @mixin backgroundBorder ($bgColor, $borderColor){
+        background-color: $bgColor;
+        border-top: 1em solid $borderColor;
+    }
+
+    &.purple { @include backgroundBorder($light-purple, $purple); }
+    &.blue   { @include backgroundBorder($light-blue, $blue); }
+    &.green  { @include backgroundBorder($light-green, $green); }
+    &.yellow { @include backgroundBorder($light-yellow, $yellow); }
+    &.pink   { @include backgroundBorder($light-pink, $pink); }
+    &.red    { @include backgroundBorder($light-red, $red); }
 }
 
 h1,h2,h3,h4,h5 {
