@@ -43,10 +43,8 @@ header {
     }
 
     @media (min-width: $desktopMinimum) {
-        &.home {
-            padding-top: 1em;
-            .title { font-size: 3em; }
-        }
+        padding-top: 1em;
+        .title { font-size: 3em; }
     }
 }
 
