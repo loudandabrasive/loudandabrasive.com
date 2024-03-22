@@ -13,3 +13,18 @@
 
   </body>
 </html>
+
+<script>
+  let rand = Math.floor(Math.random() * 6);
+  let colorway = (color) => 
+    document.body.classList.add(color)
+  switch (rand) {
+    case 0: colorway('purple'); break;
+    case 1: colorway('blue'); break;
+    case 2: colorway('green'); break;
+    case 3: colorway('yellow'); break;
+    case 4: colorway('pink'); break;
+    case 5: colorway('red'); break;
+    default: colorway('red'); break;
+  }
+</script>
