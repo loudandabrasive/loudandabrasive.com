@@ -22,6 +22,22 @@ $light-yellow: #ffeac2ff;
 $light-pink: #ffebedff;
 $light-red: #f0bcbeff;
 
+$colorways: (
+    "purple": ($purple : $light-purple),
+    "blue": ($blue: $light-blue),
+    "green" :($green: $light-green)
+);
+
+@mixin colorway($colorwaysMap) {
+    .colorway {
+        @each $name, $colorway in $colorwaysMap {
+            &.#{$name} {
+                @content($colorway)
+            }
+        }
+    }
+}
+
 /* Responsivity */
 $desktopMinimum: 992px;
 $veryTinyMax: 576px;

@@ -20,17 +20,14 @@ body {
     background-color: $light-purple;
     border-top: 1em solid $purple;
 
-    @mixin backgroundBorder ($bgColor, $borderColor){
-        background-color: $bgColor;
-        border-top: 1em solid $borderColor;
+    .colorway {
+        @include colorway($colorways) using ($colorway) {
+            @each $color, $light-color in $colorway {
+                background-color: $light-color;
+                border-top: 1em solid $color;
+            }
+        }
     }
-
-    &.purple { @include backgroundBorder($light-purple, $purple); }
-    &.blue   { @include backgroundBorder($light-blue, $blue); }
-    &.green  { @include backgroundBorder($light-green, $green); }
-    &.yellow { @include backgroundBorder($light-yellow, $yellow); }
-    &.pink   { @include backgroundBorder($light-pink, $pink); }
-    &.red    { @include backgroundBorder($light-red, $red); }
 }
 
 h1,h2,h3,h4,h5 {

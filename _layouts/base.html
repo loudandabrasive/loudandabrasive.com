@@ -13,8 +13,14 @@
 
     <script>
       let rand = Math.floor(Math.random() * 6);
-      let colorway = (color) => 
-        document.body.classList.add(color)
+
+      let colorway = (color) => {
+        const colorwayTargets = document.querySelectorAll('.colorway');
+        for (const target of colorwayTargets) {
+          box.classList.add(`colorway-${color}`);
+        }
+      }
+
       switch (rand) {
         case 0: colorway('purple'); break;
         case 1: colorway('blue'); break;
