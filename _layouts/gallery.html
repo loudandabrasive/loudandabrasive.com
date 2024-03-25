@@ -5,50 +5,33 @@ layout: default
 <h2>{{ page.title }}</h2>
 
 <div class="row">
+{% for work in page.works %}
     <div class="column">
-        <img src="https://loremflickr.com/320/240" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        <img src="{{work.thumbnail}}"
+             alt="{{work.thumbnail-alt}}"
+             style="width:100%" onclick="openModal({{work.id}});currentSlide(1)"
+             class="hover-shadow cursor">
     </div>
-    <div class="column">
-        <img src="https://loremflickr.com/300/200" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <div id="modal-{{work.id}}" class="modal">
+        <span class="close cursor" onclick="closeModal({{work.id}})">&times;</span>
+        <div class="modal-content">
+        {% for pic in work.pics %}
+            <div class="mySlides">
+                <div class="numbertext">X / X</div>
+                <img src="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">
+            </div>
+        {% endfor %}
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption">Hey!</p>
+            </div>
+        </div>
     </div>
-    <div class="column">
-        <img src="https://loremflickr.com/500/500" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-    </div>
-    <div class="column">
-        <img src="https://loremflickr.com/320/240" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-    </div>
+{% endfor %}
 </div>
 
 <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-        <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-                <img src="https://loremflickr.com/320/240" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="https://loremflickr.com/300/200" style="width:100%">
-            </div>
-
-        <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img src="https://loremflickr.com/500/500" style="width:100%">
-        </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            <img src="https://loremflickr.com/320/240" style="width:100%">
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
         <div class="column">
             <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
         </div>
@@ -65,12 +48,12 @@ layout: default
 </div>
 
 <script>
-    function openModal() {
-  document.getElementById("myModal").style.display = "block";
+function openModal(id) {
+  document.getElementById(`modal-${id}`).style.display = "block";
 }
 
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+function closeModal(id) {
+  document.getElementById(`modal-${id}`).style.display = "none";
 }
 
 var slideIndex = 1;
