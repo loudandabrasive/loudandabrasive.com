@@ -5,7 +5,7 @@
 
 {% seo title=false %}
 </head>
-  <body>
+  <body class="colorway">
 
     {{ content }}
 
@@ -13,8 +13,10 @@
 
     <script>
       let rand = Math.floor(Math.random() * 6);
-      let colorway = (color) => 
-        document.body.classList.add(color)
+      let colorway = (color) =>
+        document.querySelectorAll('.colorway').forEach(
+          colorElement=>colorElement.classList.add(color));
+
       switch (rand) {
         case 0: colorway('purple'); break;
         case 1: colorway('blue'); break;
