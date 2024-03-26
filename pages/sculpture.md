@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: Scupture
+title: Sculpture
 permalink: /sculpture/
 description: Sculpture gallery of works by Patrick McVeety-Mill
 
