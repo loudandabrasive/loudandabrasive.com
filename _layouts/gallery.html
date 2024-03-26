@@ -12,9 +12,9 @@ layout: default
             style="width:100%" onclick="openModal({{work.id}})"
             class="hover-shadow cursor">
 
-    <div id="modal-{{work.id}}" class="modal">
-        <span class="close cursor" onclick="closeModal({{work.id}})">&times;</span>
+    <div id="modal-{{work.id}}" class="modal colorway">
         <div class="modal-content">
+        <span class="close cursor" onclick="closeModal({{work.id}})">&times;</span>
         {% for pic in work.pics %}
             <div class="slides">
                 <div class="numbertext">X / X</div>

@@ -20,29 +20,47 @@
     }
 }
 
-  /* The Modal (background) */
-  .modal {
+/* Lightbox Modal */
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 1em;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
-  }
-  
-  /* Modal Content */
-  .modal-content {
+
+    &.purple { background-color: $purple; }
+    &.blue   { background-color: $blue; }
+    &.green  { background-color: $green; }
+    &.yellow { background-color: $yellow; }
+    &.pink   { background-color: $pink; }
+    &.red    { background-color: $red; }
+}
+
+.modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: $neutral;
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
-  }
+    height: 90vh;
+
+    .slides {
+        display: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    img {
+        height: 75vh;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
   
   /* The Close Button */
   .close {
@@ -60,11 +78,8 @@
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .mySlides {
-    display: none;
-  }
-  
+
+
   .cursor {
     cursor: pointer;
   }
