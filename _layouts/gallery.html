@@ -4,14 +4,14 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
-<div class="row">
+<ul class="gallery-grid">
 {% for work in page.works %}
-    <div class="column">
-        <img src="{{work.thumbnail}}"
-             alt="{{work.thumbnail-alt}}"
-             style="width:100%" onclick="openModal({{work.id}})"
-             class="hover-shadow cursor">
-    </div>
+<li>
+    <img src="{{work.thumbnail}}"
+            alt="{{work.thumbnail-alt}}"
+            style="width:100%" onclick="openModal({{work.id}})"
+            class="hover-shadow cursor">
+
     <div id="modal-{{work.id}}" class="modal">
         <span class="close cursor" onclick="closeModal({{work.id}})">&times;</span>
         <div class="modal-content">
@@ -29,8 +29,9 @@ layout: default
             </div>
         </div>
     </div>
+</li>
 {% endfor %}
-</div>
+</ul>
 <script>
 
 function openModal(id) {
