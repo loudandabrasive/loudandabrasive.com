@@ -16,6 +16,7 @@ layout: default
             <span class="close" onclick="closeModal({{work.id}})">
                 <i class="fas fa-times"></i>
             </span>
+            <h3>{{work.title}}</h3>
             {% for pic in work.pics %}
             <div class="slides">
                 <img src="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">

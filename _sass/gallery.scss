@@ -50,6 +50,12 @@
     max-width: 1200px;
     height: 85vh;
 
+    h3 {
+        text-align: center;
+        padding-top: 0.5rem;
+        margin-bottom: 0;
+    }
+
     .slides {
         display: none;
         margin: auto;
