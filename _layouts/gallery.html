@@ -13,15 +13,15 @@ layout: default
 
     <div id="modal-{{work.id}}" class="modal colorway">
         <div class="modal-content">
-        <span class="close" onclick="closeModal({{work.id}})">
-            <i class="fas fa-times"></i>
-        </span>
-        {% for pic in work.pics %}
+            <span class="close" onclick="closeModal({{work.id}})">
+                <i class="fas fa-times"></i>
+            </span>
+            {% for pic in work.pics %}
             <div class="slides">
                 <img src="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">
                 <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
             </div>
-        {% endfor %}
+            {% endfor %}
             <a class="prev" onclick="plusSlides({{work.id}}, -1)">
                 <i class="far fa-hand-point-left"></i>
             </a>
@@ -34,9 +34,9 @@ layout: default
                     <p class="photo-credit">
                         {{work.credit.text}}
                         {% if work.credit.url %}
-                          <a href="{{work.credit.url}}">
+                            <a href="{{work.credit.url}}">
                             <i class="fas fa-external-link-alt"></i>
-                          </a>
+                            </a>
                         {% endif %}
                     </p>
                 {% endif %}
