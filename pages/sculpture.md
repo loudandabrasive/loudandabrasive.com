@@ -13,8 +13,6 @@ works:
   credit:
     text: "📷 Photos taken by Holly Marie Photography"
     url: https://hollymarie.photo/
-  thumbnail: https://live.staticflickr.com/65535/50775504953_b6ff3c9c9b_b.jpg
-  thumbnail-alt: Sculpture of giant squid made from a variety of colorful beer boxes
   pics:
     - src: https://live.staticflickr.com/65535/50776373042_29bc11e9d4_b.jpg
       alt: Rear view of the squid sculpture
@@ -29,8 +27,6 @@ works:
   credit:
     text: "📷 Photos taken by Holly Marie Photography"
     url: https://hollymarie.photo/
-  thumbnail: https://live.staticflickr.com/65535/50776373237_c97d1e921a_b.jpg
-  thumbnail-alt: Sculpture of blue jay made from cardboard, colored with photo of bluebonnet flowers
   pics:
     - src: https://live.staticflickr.com/65535/50776373237_c97d1e921a_b.jpg
       alt: Sculpture of blue jay made from cardboard, colored with photo of bluebonnet flowers
@@ -45,8 +41,6 @@ works:
   credit:
     text: "📷 Photos taken by Holly Marie Photography"
     url: https://hollymarie.photo/
-  thumbnail: https://live.staticflickr.com/65535/50781129417_43826bdc94_b.jpg
-  thumbnail-alt: Sculpture of a man made of wire and cardboard shapes, made to look like a masked wrestler with ink marker
   pics:
     - src: https://live.staticflickr.com/65535/50781129417_43826bdc94_b.jpg
       alt: Sculpture of a man made of wire and cardboard shapes, made to look like a masked wrestler with ink marker
@@ -61,8 +55,6 @@ works:
   credit:
     text: "📷 Photos taken by Holly Marie Photography"
     url: https://hollymarie.photo/
-  thumbnail: https://live.staticflickr.com/65535/50776372962_1d4ba68c43_b.jpg
-  thumbnail-alt: Sculpture of luchador made from cardboard featuring a green mask and evocations of a tree
   pics:
     - src: https://live.staticflickr.com/65535/50776372962_1d4ba68c43_b.jpg
       alt: Sculpture of luchador made from cardboard featuring a green mask and evocations of a tree
@@ -79,8 +71,6 @@ works:
   credit:
     text: "📷 Photos by Holly Marie Photography"
     url: https://hollymarie.photo/
-  thumbnail: https://live.staticflickr.com/65535/50775498983_458cfde401_k.jpg
-  thumbnail-alt: Sculpture of a crested bird made of black and brown cardboard
   pics:
     - src: https://live.staticflickr.com/65535/50775498983_458cfde401_k.jpg
       alt: Sculpture of a crested bird made of black and brown cardboard
@@ -97,8 +87,6 @@ works:
   credit:
     text: "📷 Photos by Photos with Gigs"
     url: https://instagram.com/photoswithgigs/
-  thumbnail: https://live.staticflickr.com/65535/52261049941_ab12a4bb1c_b.jpg
-  thumbnail-alt: Sculpture of a green bird with red breast and black wings perched on a branch made of cardboard from different beer boxes
   pics:
     - src: https://live.staticflickr.com/65535/52261049941_ab12a4bb1c_b.jpg
       alt: Sculpture of a green bird with red breast and black wings perched on a branch made of cardboard from different beer boxes
