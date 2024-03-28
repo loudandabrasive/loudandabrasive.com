@@ -19,7 +19,7 @@ layout: default
             <h3>{{work.title}}</h3>
             {% for pic in work.pics %}
             <div class="slides">
-                <img src="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">
+                <img srctbd="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">
                 <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
             </div>
             {% endfor %}
@@ -50,6 +50,7 @@ layout: default
 <script>
 
 function openModal(id) {
+  loadImages(id);
   document.getElementById(`modal-${id}`).style.display = "block";
   showSlides(id, 1);
 }
@@ -61,6 +62,11 @@ function closeModal(id) {
 
 function plusSlides(id, n) {
   showSlides(id, slideIndex += n);
+}
+
+function loadImages(id) {
+  document.querySelectorAll(`#modal-${id} .slides img`).forEach(
+    image => image.setAttribute("src", image.getAttribute("srctbd")));
 }
 
 function showSlides(id, n) {
