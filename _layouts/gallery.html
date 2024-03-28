@@ -7,9 +7,9 @@ layout: default
 <ul class="gallery-grid">
 {% for work in page.works %}
 <li>
-    <img src="{{work.thumbnail}}"
-            alt="{{work.thumbnail-alt}}"
-            style="width:100%" onclick="openModal({{work.id}})">
+    <img src="{{work.thumbnail}}" loading="lazy"
+         alt="{{work.thumbnail-alt}}" style="width:100%"
+         onclick="openModal({{work.id}})">
 
     <div id="modal-{{work.id}}" class="modal colorway">
         <div class="modal-content">
