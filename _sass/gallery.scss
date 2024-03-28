@@ -13,6 +13,7 @@
         height: 100%;
 
         >img {
+            cursor: pointer;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -62,63 +63,46 @@
     }
 }
   
-  /* The Close Button */
-  .close {
-    color: white;
+
+.close {
+    color: $black;
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2em;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
     cursor: pointer;
-  }
 
+    &:hover, &:focus {
+      color: $white;
+      text-decoration: none;
+    }
+}
 
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
+    padding: 0.5rem;
+    color: $black;
     font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+    font-size: 2em;
+
+    &:hover { 
+        color: $white;
+    }
+}
+
   
   /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
+
+.next { right: 0; }
+
     position: absolute;
     top: 0;
   }
