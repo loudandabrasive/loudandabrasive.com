@@ -30,7 +30,16 @@ layout: default
             </a>
             <div class="caption-container">
                 <p id="caption">{{work.description}}</p>
-                <p>{{work.credit.text}} <a href="{{work.credit.url}}">GO</a>></p>
+                {% if work.credit.text %}
+                    <p class="photo-credit">
+                        {{work.credit.text}}
+                        {% if work.credit.url %}
+                          <a href="{{work.credit.url}}">
+                            <i class="fas fa-external-link-alt"></i>
+                          </a>
+                        {% endif %}
+                    </p>
+                {% endif %}
             </div>
         </div>
     </div>

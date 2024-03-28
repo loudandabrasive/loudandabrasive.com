@@ -48,7 +48,7 @@
     padding: 0;
     width: 90%;
     max-width: 1200px;
-    height: 90vh;
+    height: 85vh;
 
     .slides {
         display: none;
@@ -57,12 +57,11 @@
     }
 
     img {
-        height: 75vh;
+        height: 70vh;
         max-width: 100%;
         object-fit: contain;
     }
 }
-  
 
 .close {
     color: $black;
@@ -105,10 +104,19 @@
     position: absolute;
     font-weight: bold;
   }
-  
-  .caption-container {
+
+.caption-container {
     text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-  }
+    font-size: 1.5em;
+    background-color:$black;
+    color: $neutral;
+    padding: .5em;
+
+    line-height: 1em;
+
+    p { margin: 0; margin-top: .5em; }
+    .photo-credit {
+        font-size: .75em;
+        i { font-size: .5em;}
+    }
+}
