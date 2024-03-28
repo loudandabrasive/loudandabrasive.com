@@ -18,8 +18,8 @@ layout: default
         </span>
         {% for pic in work.pics %}
             <div class="slides">
-                <div class="numbertext">X / X</div>
                 <img src="{{pic.src}}" alt="{{pic.alt}}" style="width:100%">
+                <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
             </div>
         {% endfor %}
             <a class="prev" onclick="plusSlides({{work.id}}, -1)">
