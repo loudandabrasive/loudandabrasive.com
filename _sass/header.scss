@@ -11,7 +11,7 @@ header {
 
     text-align: center;
 
-    @media (max-width: $veryTinyMax) { 
+    @include mobile { 
         padding-top: 1em;
         min-height: 12em;
     }
@@ -27,11 +27,6 @@ header {
             color: $black;
             text-decoration: none;
         }
-
-
-        @media (max-width: $desktopMinimum) {
-            padding: 0 1em
-        }
     }
 
     .subtitle {
@@ -42,7 +37,7 @@ header {
         padding-top: 1.5rem;
     }
 
-    @media (max-width: $desktopMinimum) {
+    @include mobile {
         .subtitle { font-size: 0.6em; letter-spacing: 2px; }
     }
 }
@@ -53,7 +48,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
 
-    @media (max-width: $desktopMinimum) {
+    @include mobile {
         margin-top: 1.5em;
     }
 
@@ -72,7 +67,7 @@ header {
         line-height: 2.5em;
         margin: 1em .5em;
 
-        @media (max-width: $desktopMinimum) {
+        @include mobile {
             font-size: 1.25em;
             height: 1.75em;
             line-height: 2.2em;

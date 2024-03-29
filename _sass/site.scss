@@ -49,16 +49,16 @@ a {
 .site-content {
     width: 90%;
     max-width: 55rem;
-    @media (max-width: $desktopMinimum) { padding: 0 1rem 1rem 1rem; }
 
+    @include mobile { padding: 0 1rem 1rem 1rem; }
     @include flex-grow(1);
 
     img {
-        @media (min-width: $desktopMinimum) { 
+        @include desktop { 
             max-width: 900px;
         }
 
-        @media (max-width: $desktopMinimum) { 
+        @include mobile { 
             max-width: 100%;
             width: auto;
             height: auto;
@@ -74,6 +74,9 @@ blockquote {
 }
 
 // === HELPERS === === === === ===
+
+.desktop-only { @include mobile{ display: none !important; }; }
+.mobile-only { @include desktop { display: none !important; }; }
 
 .purple { color: $purple; }
 .blue { color: $blue; }

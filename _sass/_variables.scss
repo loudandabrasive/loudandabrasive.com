@@ -32,14 +32,14 @@ $bodyFont: 'Dongle', sans-serif;
 
 $regularFont: $bodyFont;
 
-.desktop-only {
+@mixin mobile {
     @media (max-width: $desktopMinimum) { 
-        display: none !important;
+        @content;
     }
 }
 
-.mobile-only {
+@mixin desktop {
     @media (min-width: $desktopMinimum) { 
-        display: none !important;
+        @content;
     }
 }
