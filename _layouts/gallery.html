@@ -5,7 +5,8 @@ layout: default
 <h2>{{ page.title }}</h2>
 
 <ul class="gallery-grid">
-{% for work in page.works | sort: "date" | reverse %}
+{% assign works = page.works | sort: 'date' | reverse %}
+{% for work in works %}
 <li>
     <img src="{{work.pics.first.src}}" loading="lazy"
          alt="{{work.pics.first.alt}}" style="width:100%"
