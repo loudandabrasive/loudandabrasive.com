@@ -15,7 +15,9 @@ body {
 
     color:$text;
     font-family: $regularFont;
-    font-size: 1.2em;
+
+    @include desktop { font-size: 1.2em; }
+    @include mobile { font-size: 1em; }
 
     background-color: $light-purple;
     border-top: 1em solid $purple;

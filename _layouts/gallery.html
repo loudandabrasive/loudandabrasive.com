@@ -41,6 +41,9 @@ layout: default
                         {% endif %}
                     </p>
                 {% endif %}
+                <span class="mobile-only" style="cursor: pointer;" onclick="closeModal({{work.id}})">
+                    <i class="fas fa-times"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -58,7 +61,6 @@ function openModal(id) {
 function closeModal(id) {
   document.getElementById(`modal-${id}`).style.display = "none";
 }
-
 
 function plusSlides(id, n) {
   showSlides(id, slideIndex += n);
