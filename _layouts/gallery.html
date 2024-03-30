@@ -6,7 +6,7 @@ layout: default
 </div>
 
 <ul class="gallery-grid">
-{% assign works = page.works | sort: 'date' | reverse %}
+{% assign works = paginator.posts | sort: 'date' | reverse %}
 {% for work in works %}
 <li>
     <img src="{{work.pics.first.src}}" loading="lazy"
