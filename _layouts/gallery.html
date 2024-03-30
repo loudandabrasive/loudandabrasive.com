@@ -3,6 +3,7 @@ layout: default
 ---
 
 <h2>{{ page.title }}</h2>
+</div>
 
 <ul class="gallery-grid">
 {% assign works = page.works | sort: 'date' | reverse %}
@@ -10,11 +11,11 @@ layout: default
 <li>
     <img src="{{work.pics.first.src}}" loading="lazy"
          alt="{{work.pics.first.alt}}" style="width:100%"
-         onclick="openModal({{work.id}})">
+         onclick="openModal({{forloop.index}})">
 
-    <div id="modal-{{work.id}}" class="modal colorway">
+    <div id="modal-{{forloop.index}}" class="modal colorway">
         <div class="modal-content">
-            <span class="close" onclick="closeModal({{work.id}})">
+            <span class="close" onclick="closeModal({{forloop.index}})">
                 <i class="fas fa-times"></i>
             </span>
             <h3>{{work.title}}</h3>
@@ -24,10 +25,10 @@ layout: default
                 <div class="numbertext">{{forloop.index}} / {{forloop.length}}</div>
             </div>
             {% endfor %}
-            <a class="prev" onclick="plusSlides({{work.id}}, -1)">
+            <a class="prev" onclick="plusSlides({{forloop.index}}, -1)">
                 <i class="far fa-hand-point-left"></i>
             </a>
-            <a class="next" onclick="plusSlides({{work.id}}, 1)">
+            <a class="next" onclick="plusSlides({{forloop.index}}, 1)">
                 <i class="far fa-hand-point-right"></i>
             </a>
             <div class="caption-container">
@@ -42,7 +43,7 @@ layout: default
                         {% endif %}
                     </p>
                 {% endif %}
-                <span class="mobile-only" style="cursor: pointer;" onclick="closeModal({{work.id}})">
+                <span class="mobile-only" style="cursor: pointer;" onclick="closeModal({{forloop.index}})">
                     <i class="fas fa-times"></i>
                 </a>
             </div>
