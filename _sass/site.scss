@@ -79,10 +79,3 @@ blockquote {
 
 .desktop-only { @include mobile{ display: none !important; }; }
 .mobile-only { @include desktop { display: none !important; }; }
-
-.purple { color: $purple; }
-.blue { color: $blue; }
-.green { color: $green; }
-.yellow { color: $yellow; }
-.pink { color: $pink; }
-.red { color: $red; }
