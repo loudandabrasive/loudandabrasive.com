@@ -43,3 +43,9 @@ $regularFont: $bodyFont;
         @content;
     }
 }
+
+@mixin verytall {
+    @media (min-height: 1600px) {
+        @content;
+    }
+}

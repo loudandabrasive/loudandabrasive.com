@@ -57,6 +57,10 @@
         width: 90%;
         max-width: 1200px;
         height: 85vh;
+
+        @include verytall {
+            height: 80vh;
+        }
     }
 
     @include mobile {
