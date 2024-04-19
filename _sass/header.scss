@@ -84,7 +84,7 @@ header {
         &:nth-child(5n+5) { background-color: $pink; }
         &:nth-child(6n+6) { background-color: $red; }
 
-        transition: transform ease 0.2s;
+        @include transition (transform ease 0.2s);
 
         a { color: $white; text-decoration: none; }
 
