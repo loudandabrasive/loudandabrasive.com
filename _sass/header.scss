@@ -84,11 +84,22 @@ header {
         &:nth-child(5n+5) { background-color: $pink; }
         &:nth-child(6n+6) { background-color: $red; }
 
-        top: 0;
-        position: relative;
-        transition: top ease 0.5s;
-        &:hover { filter: brightness(120%) saturate(75%); top: -0.5em; }
+        transition: transform ease 0.2s;
 
         a { color: $white; text-decoration: none; }
+
+        &:hover {
+
+            @mixin invert ($color) { border-color: $color; a { color: $color; } }
+            background-color: $white;
+            transform: scale(1.2);
+
+            &:nth-child(1n+1) { @include invert($purple); }
+            &:nth-child(2n+2) { @include invert($blue); }
+            &:nth-child(3n+3) { @include invert($green); }
+            &:nth-child(4n+4) { @include invert($yellow); }
+            &:nth-child(5n+5) { @include invert($pink); }
+            &:nth-child(6n+6) { @include invert($red); }
+        }
       }
 }
