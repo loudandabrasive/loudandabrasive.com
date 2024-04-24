@@ -65,3 +65,22 @@
 #homepages {
     margin-top: 2rem;
 }
+
+.home-notice {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+
+    div {
+        border: 3px solid $black;
+        border-radius: 1em;
+        @include desktop { height: 100%; }
+
+        background-color: $white;
+        display: block;
+        margin-bottom: 1em;
+
+        p { padding: 0 0.5em;}
+    }
+
+}
