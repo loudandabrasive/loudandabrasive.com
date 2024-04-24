@@ -9,12 +9,12 @@
   show: true
 
 - title: Watch on YouTube
-  url: https://youtube.com/loudandabrasive
+  url: https://youtube.com/@loudandabrasive
   icon: 'fab fa-youtube'
   show: true
 
 - title: Play on Itch
-  url: https://itch.io/loudandabrasive
+  url: https://loudandabrasive.itch.io/
   icon: 'fab fa-itch-io'
   show: true
 
@@ -26,4 +26,4 @@
 - title: Subscribe
   url: https://example.com
   icon: 'fa fa-rss'
-  show: true
+  show: false
