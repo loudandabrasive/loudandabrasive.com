@@ -57,3 +57,12 @@ $regularFont: $bodyFont;
     -ms-transition: $transition;
     transition: $transition;
 }
+
+@mixin blob {
+    border: 3px solid $black;
+    border-radius: 1em;
+    @include desktop { height: 100%; }
+
+    background-color: $white;
+    display: block;
+}
