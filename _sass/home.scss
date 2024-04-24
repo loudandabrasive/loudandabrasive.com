@@ -11,7 +11,7 @@
     li {
         border: 3px solid $black;
         border-radius: 1em;
-        include desktop { height: 100%; }
+        @include desktop { height: 100%; }
 
         background-color: $white;
         display: block;

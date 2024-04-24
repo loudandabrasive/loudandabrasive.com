@@ -46,6 +46,10 @@ a {
     &:hover {
         color:$green;
     }
+    &:visited {
+        color: $purple;
+        &:hover { color:$green; }
+    }
 }
 
 .site-content {
@@ -66,6 +70,10 @@ a {
             height: auto;
         }
     }
+}
+
+footer {
+    margin-top: 1em;
 }
 
 blockquote {
