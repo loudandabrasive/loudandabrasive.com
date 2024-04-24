@@ -87,3 +87,10 @@ blockquote {
 
 .desktop-only { @include mobile{ display: none !important; }; }
 .mobile-only { @include desktop { display: none !important; }; }
+
+.blob {
+    @include blob();
+    font-size: 1.5em;
+    line-height: 1em;
+    padding: 0.5em;
+}
